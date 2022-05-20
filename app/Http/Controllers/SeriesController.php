@@ -6,18 +6,13 @@ use Illuminate\Http\Request;
 
 class SeriesController extends Controller 
 {
-    public function index(Request $request) {
+    public function index() {
         $series = [
             'Friends',
             'HIMYM',
-            'The Boys',
+            'The Boys'
         ];
-        $html = "<ul>";
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        }
-        $html .= "</ul>";
-    
-        return $html;
+
+        return view(view:'series.index');
     }
 }
